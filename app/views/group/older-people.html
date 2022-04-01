@@ -1,0 +1,72 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+Home – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <span class="govuk-caption-xl">At risk communities</span>
+        <h1 class="govuk-heading-xl">
+            Older people
+        </h1>
+        <p class="govuk-body">Last updated on June 2021</p>
+
+        <h2 class="govuk-heading-l">Quote</h2>
+
+        {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+        {{ govukInsetText({
+        text: "Think about older people. IT is very poor. Really thinking everyone is young. Your people on the phone were very good, if it wasn’t for them this would have been a disaster – User research, June 2020"
+        }) }}
+
+        <h2 class="govuk-heading-l">Facts and figures</h2>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>There are nearly 12 million (11,989,322) people aged 65 and above in the UK of which: 5.4 million people
+                are
+                aged 75+, 1.6 million are aged 85+, Over 500,000 people are 90+ (579,776), 14,430 are centenarians</li>
+            <li><a href="https://ageing-better.org.uk/news/lockdown-could-leave-next-generation-retirees-poorer-and-sicker-last"
+                    class="govuk-link">Centre for Better Ageing report</a> states that a fifth of people in this age
+                group have seen their physical
+                health
+                deteriorate during the lockdown period, and over a third say their mental health has worsened</li>
+            <li>People who are 80 or older were 70X more likely to die than those under 40</li>
+        </ul>
+
+        <h2 class="govuk-heading-l">Needs to consider in your designs</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>I need to be informed about the process and purpose of testing so that I
+                can feel prepared for it</li>
+            <li>I need an option to test from the safety of my home with the support of
+                another person or on the phone</li>
+            <li>I need a way of getting my test delivered to my home without an email or
+                phone</li>
+            <li>I need the testing experience to be connected to my GP and/or
+                pharmacist</li>
+            <li>I need reliable guidance about the testing process and about shielding
+                instructions</li>
+            <li>I need a way of getting a test and my results by phone call</li>
+        </ul>
+
+
+    </div>
+</div>
+
+
+
+{% endblock %}

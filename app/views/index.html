@@ -1,0 +1,59 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+Home – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "prototype"
+},
+html: 'This is a prototype – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Inclusive design tool
+    </h1>
+    <p class="govuk-body-l">
+      We've divided groups uncovered in research which make people vulnerable or high risk into four categories. </p>
+    <p> In
+      real life,
+      people may present a combination of one or more characteristics from each of these factors, resulting in complex
+      and varied needs.</p>
+
+    <p>The needs and attitudes of people are constantly changing. Being able to flexibly layer multiple factors from
+      each
+      category gives a more dynamic understanding of people's needs and behaviours.</p>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h2 class="govuk-heading-l">At risk communities</h2>
+
+    <ul class="govuk-list">
+      <li>
+        <a href="/group/older-people">Older people</a>
+      </li>
+      <li>An example&nbsp;{%- from "govuk/components/tag/macro.njk" import govukTag -%}{{ govukTag({text: "draft", classes: "govuk-tag--grey"}) }}
+      </li>
+      <li>Another example&nbsp;{%- from "govuk/components/tag/macro.njk" import govukTag -%}{{ govukTag({text: "draft", classes: "govuk-tag--grey"}) }}
+      </li>
+      
+    </ul>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+  </div>
+</div>
+
+
+
+{% endblock %}
